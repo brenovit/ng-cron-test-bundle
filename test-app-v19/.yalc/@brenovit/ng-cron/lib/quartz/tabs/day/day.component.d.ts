@@ -1,0 +1,108 @@
+import { ChangeDetectorRef } from '@angular/core';
+import { Segment, CronQuartzUIService } from '@sbzen/cron-core';
+import { CronTabComponent } from './../../../cron-tab.abstract';
+import * as i0 from "@angular/core";
+export declare class QuartzCronDayComponent extends CronTabComponent {
+    readonly cronUI: CronQuartzUIService;
+    protected readonly cd: ChangeDetectorRef;
+    readonly api: {
+        isDayOfWeekRangeSelected: () => boolean;
+        selectDayOfWeekRange: () => void;
+        isDayOfWeekRangeControlsDisabled: () => boolean;
+        getDayOfWeekRangePrimary: () => string;
+        setDayOfWeekRangePrimary: (value: string) => void;
+        getDayOfWeekRangeSecondary: () => string;
+        setDayOfWeekRangeSecondary: (value: string) => void;
+        isDayOfMonthLastDaySelected: () => boolean;
+        selectDayOfMonthLastDay: () => void;
+        isDayOfMonthLastDayWeekSelected: () => boolean;
+        selectDayOfMonthLastDayWeek: () => void;
+        isDayOfWeekLastNTHDayWeekSelected: () => boolean;
+        selectDayOfWeekLastNTHDayWeek: () => void;
+        isDayOfWeekLastNTHDayWeekControlsDisabled: () => boolean;
+        getDayOfWeekLastNTHDayWeekValue: () => string;
+        setDayOfWeekLastNTHDayWeekValue: (value: string) => void;
+        isDayOfMonthDaysBeforeEndMonthSelected: () => boolean;
+        selectDayOfMonthDaysBeforeEndMonth: () => void;
+        isDayOfMonthDaysBeforeEndMonthControlsDisabled: () => boolean;
+        getDayOfMonthDaysBeforeEndMonthValue: () => string;
+        setDayOfMonthDaysBeforeEndMonthValue: (value: string) => void;
+        isDayOfMonthNearestWeekDayOfMonthSelected: () => boolean;
+        selectDayOfMonthNearestWeekDayOfMonth: () => void;
+        isDayOfMonthNearestWeekDayOfMonthControlsDisabled: () => boolean;
+        getDayOfMonthNearestWeekDayOfMonthValue: () => string;
+        setDayOfMonthNearestWeekDayOfMonthValue: (value: string) => void;
+        isDayOfWeekNTHWeekDayOfMonthSelected: () => boolean;
+        selectDayOfWeekNTHWeekDayOfMonth: () => void;
+        isDayOfWeekNTHWeekDayOfMonthControlsDisabled: () => boolean;
+        getDayOfWeekNTHWeekDayOfMonthPrimaryValue: () => string;
+        setDayOfWeekNTHWeekDayOfMonthPrimaryValue: (value: string) => void;
+        getDayOfWeekNTHWeekDayOfMonthSecondaryValue: () => string;
+        setDayOfWeekNTHWeekDayOfMonthSecondaryValue: (value: string) => void;
+        isEverySelected: () => boolean;
+        selectEvery: () => void;
+        isDayOfWeekIncrementSelected: () => boolean;
+        selectDayOfWeekIncrement: () => void;
+        isDayOfWeekIncrementControlsDisabled: () => boolean;
+        getDayOfWeekIncrementPrimary: () => string;
+        setDayOfWeekIncrementPrimary: (value: string) => void;
+        getDayOfWeekIncrementSecondary: () => string;
+        setDayOfWeekIncrementSecondary: (value: string) => void;
+        isDayOfMonthIncrementSelected: () => boolean;
+        selectDayOfMonthIncrement: () => void;
+        isDayOfMonthIncrementControlsDisabled: () => boolean;
+        getDayOfMonthIncrementPrimary: () => string;
+        setDayOfMonthIncrementPrimary: (value: string) => void;
+        getDayOfMonthIncrementSecondary: () => string;
+        setDayOfMonthIncrementSecondary: (value: string) => void;
+        isDayOfWeekAndSelected: () => boolean;
+        selectDayOfWeekAnd: () => void;
+        isDayOfWeekAndControlsDisabled: () => boolean;
+        isSelectedDayOfWeekAndValue: (value: string) => boolean;
+        selectDayOfWeekAndValue: (value: string) => boolean;
+        isDayOfMonthAndSelected: () => boolean;
+        selectDayOfMonthAnd: () => void;
+        isDayOfMonthAndControlsDisabled: () => boolean;
+        isSelectedDayOfMonthAndValue: (value: string) => boolean;
+        selectDayOfMonthAndValue: (value: string) => boolean;
+    };
+    readonly segment: typeof Segment;
+    readonly segments: Segment[];
+    readonly daysOfWeekEvery: {
+        value: string;
+        label: string;
+    }[];
+    readonly daysOfWeek: {
+        value: string;
+        label: string;
+    }[];
+    readonly daysOfWeekCodes: {
+        value: import("@sbzen/cron-core/enums").WeekDayCode;
+        label: import("@sbzen/cron-core/enums").WeekDay;
+    }[];
+    readonly daysOfMonthEvery: {
+        value: string;
+        label: string;
+    }[];
+    readonly daysOfMonth: {
+        value: string;
+        label: string;
+    }[];
+    readonly limitedDaysOfMonth: {
+        value: string;
+        label: string;
+    }[];
+    constructor(cronUI: CronQuartzUIService, cd: ChangeDetectorRef);
+    setDayOfWeekIncrementPrimary(e: Event): void;
+    setDayOfWeekIncrementSecondary(e: Event): void;
+    setDayOfMonthIncrementPrimary(e: Event): void;
+    setDayOfMonthIncrementSecondary(e: Event): void;
+    setDayOfWeekLastNTHDayWeekValue(e: Event): void;
+    setDayOfMonthDaysBeforeEndMonthValue(e: Event): void;
+    setDayOfMonthNearestWeekDayOfMonthValue(e: Event): void;
+    setDayOfWeekNTHWeekDayOfMonthPrimaryValue(e: Event): void;
+    setDayOfWeekNTHWeekDayOfMonthSecondaryValue(e: Event): void;
+    private getEventValue;
+    static ɵfac: i0.ɵɵFactoryDeclaration<QuartzCronDayComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<QuartzCronDayComponent, "quartz-cron-day", never, {}, {}, never, never, false, never>;
+}

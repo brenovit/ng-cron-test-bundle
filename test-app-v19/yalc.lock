@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "@brenovit/ng-cron": {
+      "signature": "03f4b252d6713687ac3263adc0aba643",
+      "file": true
+    }
+  }
+}
