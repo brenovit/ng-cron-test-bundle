@@ -1,5 +1,46 @@
-<div class="container mt-5">
-  <h1>Angular 19 + ng-cron</h1>
-  <hr />
-  <bs5-quartz-cron></bs5-quartz-cron>
+<nav class="navbar navbar-dark bg-dark mb-4">
+  <div class="container">
+    <span class="navbar-brand mb-0 h1">
+      <span class="badge bg-danger me-2">v19</span>
+      ng-cron Test App
+    </span>
+    <span class="navbar-text text-muted small"
+      >Angular 19 + &#64;brenovit/ng-cron</span
+    >
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-xl-10">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <h5 class="mb-0">Cron Expression Builder</h5>
+        </div>
+        <div class="card-body">
+          <bs5-quartz-cron
+            [(ngModel)]="cronExpression"
+            (changed)="onCronChanged($event)"
+          ></bs5-quartz-cron>
+        </div>
+      </div>
+
+      <div class="card mt-4 shadow-sm">
+        <div class="card-header">
+          <h5 class="mb-0">Current Expression</h5>
+        </div>
+        <div class="card-body">
+          <div class="d-flex align-items-center gap-3">
+            <code class="fs-5 text-primary">{{ cronExpression }}</code>
+            <button
+              class="btn btn-sm btn-outline-secondary ms-auto"
+              (click)="cronExpression = '0 0/1 * 1/1 * ? *'"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

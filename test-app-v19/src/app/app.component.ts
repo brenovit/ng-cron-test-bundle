@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { Bs5QuartzCronModule } from '@brenovit/ng-cron';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Bs5QuartzCronModule],
+  imports: [FormsModule, Bs5QuartzCronModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'test-app-v19';
+  cronExpression = '0 0/1 * 1/1 * ? *';
+
+  onCronChanged(value: string): void {
+    this.cronExpression = value;
+  }
 }
