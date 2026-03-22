@@ -2,7 +2,7 @@ import * as i1$1 from '@sbzen/cron-core';
 import { Type, Mode, Segment, getList, getMonthCodes, getDaysOfWeekCodes, CronQuartzUIService, CronUnixUIService } from '@sbzen/cron-core';
 export { Type as Tab } from '@sbzen/cron-core';
 import * as i0 from '@angular/core';
-import { EventEmitter, ElementRef, Component, ChangeDetectionStrategy, ContentChild, ViewChildren, Output, Input, NgModule, Directive, ViewChild, forwardRef } from '@angular/core';
+import { EventEmitter, ElementRef, Input, Output, ViewChildren, ContentChild, ChangeDetectionStrategy, Component, NgModule, Directive, ViewChild, forwardRef } from '@angular/core';
 import * as i1 from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
